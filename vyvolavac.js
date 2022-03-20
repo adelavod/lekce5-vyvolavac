@@ -52,14 +52,23 @@ function tahnoutJmeno() {
 
     // vypíše seznam dosud tažených jmen
     let seznamJmen = document.querySelector('#seznam');
-    seznamJmen.innerHTML = tazenaJmena;
+    seznamJmen.innerHTML = ""; //vymaže se předchozí seznam
+    tazenaJmena.forEach(vypisTazenaJmena);
+
+    // funkce, která vypíše tažená jména do "předchozí oběti"
+    function vypisTazenaJmena(ele, idx) {
+        seznamJmen.innerHTML += ele; //připíše každé nové tažené jméno do seznamu
+        //přidá čárku za element, jen pokud není poslední
+        if (tazenaJmena.length > idx+1) {
+            seznamJmen.innerHTML += ", "
+        }; 
+    }
 
     // vypíše počet již tažených jmen číslem
     let pocetVyvolanych = tazenaJmena.length;
     let pocetVyvolanychDiv = document.querySelector('#pocet-vyvolanych')
     pocetVyvolanychDiv.innerHTML = pocetVyvolanych;
-
-    console.log(jmena);
+    console.log(jmena); //jen kontrolni
 };
 
 function resetJmena() {
@@ -80,5 +89,5 @@ function resetJmena() {
     let pocetVyvolanychDiv = document.querySelector('#pocet-vyvolanych')
     pocetVyvolanychDiv.innerHTML = "Dosud žádná";
     
-console.log(jmena);
+
 }
