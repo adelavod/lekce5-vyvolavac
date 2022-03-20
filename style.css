@@ -65,6 +65,10 @@ h2 {
 	outline: 0;
 }
 
+.reset {
+	margin-top:40px;
+}
+
 .tlacitko:hover {
 	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
 	transform: translateY(-2px);
@@ -73,4 +77,9 @@ h2 {
 .tlacitko:active {
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 	transform: translateY(3px);
+}
+
+#pocet-vyvolanych {
+	font-size: 20px;
+	color: #3b518d;
 }
